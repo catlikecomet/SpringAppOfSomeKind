@@ -34,6 +34,13 @@ public class User {
 
     public User(){}
 
+    public User(int userId, String userName, String passWord, LocalDate createdAt) {
+        this.id = userId;
+        this.userName = userName;
+        this.passWord = passWord;
+        this.createdAt = createdAt;
+    }
+
     public int getId() {
         return id;
     }

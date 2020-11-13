@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--@thymesVar id="model" type="org.softwire.training.bookish.models.page.MemberPageModel"-->
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/styles/navbar.css"/>
+</head>
+<body>
+
+<div th:replace="fragments/navbar :: navbar">
+</div>
+<div class="container">
+    <h2>List of Users:</h2>
+
+    <div class="user-list">
+        <div th:each="user : ${model.users}" class="users">
+            <span  th:text="${user.Named}" />
+        </div>
+    </div>
+
+<!--    <h2>Add a Member:</h2>-->
+<!--    <form th:action="@{/members/add-member}" method="post">-->
+<!--        <div class="add-member-row">-->
+<!--            <label>-->
+<!--                <span>Name: </span>-->
+<!--                <input type="text" name="Named">-->
+<!--            </label>-->
+<!--        </div>-->
+<!--        <div class="add-tech-row">-->
+<!--            <span>&lt;!&ndash; spacer &ndash;&gt;</span>-->
+<!--            <input type="submit" value="Add member" />-->
+
+<!--        </div>-->
+<!--    </form>-->
+</div>
+</body>
+</html>
