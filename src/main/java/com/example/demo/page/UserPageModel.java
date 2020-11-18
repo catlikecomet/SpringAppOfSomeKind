@@ -1,19 +1,19 @@
 package com.example.demo.page;
 
-import com.example.demo.model.User;
+import com.example.demo.model.Quiz;
 
 import java.util.List;
 
 public class UserPageModel {
 
-    private List<User> users;
+    private List<Quiz> quizzes;
 
 
-    public List<User> getUsers() {
-        return users;
+    public List<Quiz> getQuizzes() {
+        return quizzes;
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
+    public void setQuizzes(List<Quiz> quizzes) {
+        this.quizzes = quizzes;
     }
 }

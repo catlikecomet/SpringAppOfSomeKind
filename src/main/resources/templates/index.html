@@ -5,6 +5,26 @@
     <title>index</title>
 </head>
 <body>
-<h1>Hello</h1>
+<div>
+    <h2>Books: </h2>
+    <table>
+        <thead> <tr>
+            <th>ID</th>
+            <th>userID</th>
+            <th>Name of quiz</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="quiz : ${quizzes}">
+            <td th:text="${quiz.quizID}"></td>
+            <td th:text="${quiz.userID}"></td>
+            <td th:text="${quiz.quiz_name}"></td>
+            <td><a th:href="@{/quiz/{id}(id=${quiz.quizID})}">Edit</a></td>
+            <td><a th:href="@{/quiz/delete/{id}(id=${quiz.quizID})}">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/quiz}">Add new quiz</a>
+</div>
 </body>
 </html>

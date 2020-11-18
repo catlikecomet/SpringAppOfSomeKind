@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+<form th:action="@{/quiz/{id}(id=${quiz.quizID})}" th:object="${quiz}" method="post">
+    <label for="userID">User ID</label>
+    <input type="number" th:field="*{userID}" id="userId" placeholder="userId">
+    <label for="quiz_name">Quiz Name</label>
+    <input type="text" th:field="*{quiz_name}" id="quiz_name" placeholder="Quiz Name">
+
+    <input type="submit" value="Update Quiz">
+</form>
+</body>
+</html>
