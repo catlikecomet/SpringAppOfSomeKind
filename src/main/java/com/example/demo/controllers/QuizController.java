@@ -40,6 +40,7 @@ public class QuizController {
 
     @PostMapping("/quiz/{id}")
     public RedirectView updateQuiz(@ModelAttribute Quiz quiz, @PathVariable int id) {
+
         quiz.setQuizID(id);
         quizService.updateOrCreateQuiz(quiz);
 

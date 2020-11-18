@@ -22,8 +22,8 @@ public class QuizService {
     }
 
     public List<Quiz> getAll() {
-        Iterable<Quiz> users = quizRepository.findAll();
-        return StreamSupport.stream(users.spliterator(),
+        Iterable<Quiz> quizzes = quizRepository.findAll();
+        return StreamSupport.stream(quizzes.spliterator(),
                 false).sorted(Comparator.comparing(Quiz::getQuiz_name)).collect(Collectors.toList());
     }
 
